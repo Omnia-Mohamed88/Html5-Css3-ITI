@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 60px;
+            text-align: left;
+            margin-left: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <label>Red </label><input type="range" name="redcolor" min="0" max="255" id="red"><br><br><br><br>
+        <label>Green</label><input type="range" name="greencolor" min="0" max="255" id="green"><br><br><br><br>
+        <label>Blue</label><input type="range" name="greencolor" min="0" max="255" id="blue"><br><br><br><br>
+        <p id="text">
+            Change the 3 Color Ranges above and observe my color channge
+        </p>
+        <script>
+            var red = document.getElementById('red');
+            var green = document.getElementById('green');
+            var green = document.getElementById('blue');
+            var text = document.getElementById('text');
+            red.addEventListener('input', function () {
+                uodatetextcolor();
+
+
+            }
+            )
+            green.addEventListener('input', function () {
+                uodatetextcolor();
+
+
+            }
+            )
+            blue.addEventListener('input', function () {
+                uodatetextcolor();
+
+
+            }
+            )
+            function uodatetextcolor() {
+                var redval = red.value;
+                var greenval = green.value;
+                var blueval = blue.value;
+                text.style.color = 'rgb(' + redval + ',' + greenval + ',' + blueval + ')';
+            }
+
+        </script>
+
+
+    </form>
+</body>
+
+</html>

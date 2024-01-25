@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        <p>Change Email Address</p>
+
+        <label for="username">User name should start with a letter and should also contain only characters, numbers, and
+            _
+            Finally, the length should be a minimum of 3 characters and a maximum of 20 characters</label><br>
+        <input type="text" name="username" pattern="[a-zA-Z][a-zA-Z0-9_]{2,19}"
+            title="User name should start with a letter and should also contain only characters, numbers, and _ Finally, the length should be a minimum of 3 characters and a maximum of 20 characters"
+            placeholder="Please Enter Your name" required autocomplete="off"><br>
+
+        <label for="email">Email should start with a letter and should also contain only characters, numbers, and _
+            Finally, it should end with @Gamil.com or @Yahoo.com</label><br>
+        <input type="email" name="email" pattern="[a-zA-Z][a-zA-Z0-9_]{5,10}@(Gmail|Yahoo)\.com" required
+            title="Email should start with a letter and should also contain only characters, numbers, and _ Finally, it should end with @Gamil.com or @Yahoo.com"
+            placeholder="Please Enter Your email" autocomplete="off"><br>
+
+        <button type="submit">Change</button>
+    </form>
+</body>
+
+</html>
